@@ -5,6 +5,6 @@ window.setInterval(function() {checkForRequests()}, 1000);
 function checkForRequests() {
 // TODO: support request queueing
   if (document.getElementsByClassName("monitor_value_3Yexa")[0].innerHTML == "1") { // I think this means ALL shown variables, so TODO: change later
-    alert("Test request recieved");
+    window.open("https://www.google.com/", '_blank');
   }
 }
