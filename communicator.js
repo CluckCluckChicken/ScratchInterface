@@ -4,7 +4,7 @@ window.setInterval(function() {checkForRequests()}, 100);
 
 function checkForRequests() {
 // TODO: support request queueing
-  if (document.getElementsByClassName("monitor_value_3Yexa")[0].innerHTML == "100") { // I think this means ALL shown variables, so TODO: change later
+  if (document.getElementsByClassName("monitor_value_3Yexa")[0].innerHTML == "10") { // I think this means ALL shown variables, so TODO: change later
     window.open("https://www.google.com/", '_blank');
   }
 }
