@@ -5,6 +5,7 @@ function getCode() {
     querySnapshot.forEach(function(doc) {
         // doc.data() is never undefined for query doc snapshots
         docId++
+        console.log("foreach document");
     });
   });
   
