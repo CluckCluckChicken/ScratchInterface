@@ -50,7 +50,7 @@ function checkForRequests() {
   }
 }
 
-function importCustomFunction(var functionID) {
+function importCustomFunction(functionID) {
   var docRef = db.collection("functions").doc("functionID.toString()");
   docRef.get().then(function(doc) {
     if (doc.exists) {
