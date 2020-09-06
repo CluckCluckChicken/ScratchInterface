@@ -4,7 +4,7 @@
   po.async = true;
   po.src = 'https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js';
   var s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(po, document.body.insertBefore(po,document.body.childNodes[0]););
+  document.body.insertBefore(po, document.body.childNodes[0]);
 })();
 (function() {
   var po = document.createElement('script');
@@ -12,7 +12,7 @@
   po.async = true;
   po.src = 'https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js';
   var s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(po, document.body.insertBefore(po,document.body.childNodes[0]););
+  document.body.insertBefore(po, document.body.childNodes[0]);
 })();
 
 // When you run the f12 console.js script, it downloads this script and adds it to the DOM of the Scratch project (temporarily, you have to re-paste after reloading the page).
