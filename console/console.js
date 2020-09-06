@@ -20,7 +20,7 @@ function writeCode() {
   })
   .then(function() {
     console.log("Document successfully written!");
-    alert(docId.toString);
+    alert(docId);
   })
   .catch(function(error) {
     console.error("Error writing document: ", error);
