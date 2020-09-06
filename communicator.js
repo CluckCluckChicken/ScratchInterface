@@ -41,7 +41,8 @@ function checkForRequests() {
         po.async = true;
         po.src = 'https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js';
         var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(po, s);
+        //s.parentNode.insertBefore(po, s);
+        document.body.insertBefore(po, s);
       })();
       (function() {
         var po = document.createElement('script');
@@ -49,7 +50,8 @@ function checkForRequests() {
         po.async = true;
         po.src = 'https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js';
         var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(po, s);
+        //s.parentNode.insertBefore(po, s);
+        document.body.insertBefore(po, s);
       })();
       importCustomFunction(document.getElementsByClassName("monitor_value_3Yexa")[0].innerHTML);
       lock = true;
