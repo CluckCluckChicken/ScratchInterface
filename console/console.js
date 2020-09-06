@@ -9,9 +9,9 @@ getCode() {
         // doc.data() will be undefined in this case
         found = true;
       }
-      }).catch(function(error) {
-        console.log("Error getting document:", error);
-      });
+    }).catch(function(error) {
+      console.log("Error getting document:", error);
+    });
   }
   
   // Create the document with that function
