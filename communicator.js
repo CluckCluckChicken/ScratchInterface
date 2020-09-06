@@ -10,4 +10,7 @@ function checkForRequests() {
   if (document.getElementsByClassName("monitor_value_3Yexa")[0].innerHTML == "2") { // I think this means ALL shown variables, so TODO: change later
     alert("follow potatophant!");
   }
+  if (Number(document.getElementsByClassName("monitor_value_3Yexa")[0].innerHTML) < 0) { // I think this means ALL shown variables, so TODO: change later
+    alert("Custom JS functionality coming within the next few hours!");
+  }
 }
