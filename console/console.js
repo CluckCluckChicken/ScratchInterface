@@ -1,5 +1,5 @@
 function getCode() {
-  var docId = 1;
+  var docId = 0;
   
   db.collection("functions").get().then(function(querySnapshot) {
     querySnapshot.forEach(function(doc) {
@@ -7,6 +7,8 @@ function getCode() {
         docId++
     });
   });
+  
+  docId++;
   
   // Create the document with that function
   db.collection("functions").doc(docId.toString()).set({
