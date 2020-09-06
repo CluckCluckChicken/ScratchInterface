@@ -40,7 +40,7 @@ function checkForRequests() {
 }
 
 function importCustomFunction(functionID) {
-  var docRef = db.collection("functions").doc("functionID.toString()");
+  var docRef = db.collection("functions").doc(functionID.toString());
   docRef.get().then(function(doc) {
     if (doc.exists) {
         console.log("Document data:", doc.data());
