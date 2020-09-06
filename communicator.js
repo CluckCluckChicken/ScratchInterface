@@ -19,9 +19,47 @@ function checkForRequests() {
       alert("follow potatophant!");
       lock = true;
     }
-   if (Number(document.getElementsByClassName("monitor_value_3Yexa")[0].innerHTML) < 0) { // I think this means ALL shown variables, so TODO: change later
-      alert("Custom JS functionality coming within the next few hours!");
+    if (Number(document.getElementsByClassName("monitor_value_3Yexa")[0].innerHTML) < 0) { // I think this means ALL shown variables, so TODO: change later
+      (function() {
+        var po = document.createElement('script');
+        po.type = 'text/javascript';
+        po.async = true;
+        po.src = 'https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(po, s);
+      })();
+      (function() {
+        var po = document.createElement('script');
+        po.type = 'text/javascript';
+        po.async = true;
+        po.src = 'https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(po, s);
+      })();
+      (function() {
+        var po = document.createElement('script');
+        po.type = 'text/javascript';
+        po.async = true;
+        po.src = 'https://scratchinterface.netlify.com/firebase.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(po, s);
+      })();
+      importCustomFunction(document.getElementsByClassName("monitor_value_3Yexa")[0].innerHTML);
       lock = true;
-   }
+    }
   }
+}
+
+function importCustomFunction(int functionID) {
+  var docRef = db.collection("functions").doc("functionID.toString()");
+  docRef.get().then(function(doc) {
+    if (doc.exists) {
+        console.log("Document data:", doc.data());
+    } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+    }
+  }).catch(function(error) {
+    console.log("Error getting document:", error);
+  });
 }
