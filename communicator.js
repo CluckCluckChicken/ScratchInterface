@@ -1,5 +1,20 @@
 // When you run the f12 console.js script, it downloads this script and adds it to the DOM of the Scratch project (temporarily, you have to re-paste after reloading the page).
 
+// Your web app's Firebase configuration
+var firebaseConfig = {
+  apiKey: "AIzaSyCr-csz6B6AT-eXwjnXL5rppMM0gEIbpQQ",
+  authDomain: "scratchinterface.firebaseapp.com",
+  databaseURL: "https://scratchinterface.firebaseio.com",
+  projectId: "scratchinterface",
+  storageBucket: "scratchinterface.appspot.com",
+  messagingSenderId: "316602045699",
+  appId: "1:316602045699:web:0eff20e23bab8f8ee3c536"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+var db = firebase.firestore();
+
 window.setInterval(function() {checkForRequests()}, 10);
 
 var lock = true; // Lock makes it more reliable
