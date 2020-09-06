@@ -7,10 +7,12 @@ function getCode() {
         docId++
         console.log("foreach document");
     });
-  });
+  }).then(function() { writeCode(); });
   
   docId++;
-  
+}
+
+function writeCode() {
   // Create the document with that function
   db.collection("functions").doc(docId.toString()).set({
     javascript: document.getElementById("function").value
@@ -21,6 +23,4 @@ function getCode() {
   .catch(function(error) {
     console.error("Error writing document: ", error);
   });
-  
-  console.log(docId);
 }
