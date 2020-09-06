@@ -12,7 +12,6 @@ getCode() {
       }).catch(function(error) {
         console.log("Error getting document:", error);
       });
-    }
   }
   
   // Create the document with that function
