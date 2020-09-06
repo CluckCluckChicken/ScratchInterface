@@ -1,4 +1,4 @@
-getCode() {
+function getCode() {
   var docId = 1;
   while (var found == false) {
     var docRef = db.collection("functions").doc(docId.toString());
