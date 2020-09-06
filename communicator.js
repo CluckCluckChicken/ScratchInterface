@@ -1,3 +1,20 @@
+(function() {
+  var po = document.createElement('script');
+  po.type = 'text/javascript';
+  po.async = true;
+  po.src = 'https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(po, document.body.insertBefore(po,document.body.childNodes[0]););
+})();
+(function() {
+  var po = document.createElement('script');
+  po.type = 'text/javascript';
+  po.async = true;
+  po.src = 'https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(po, document.body.insertBefore(po,document.body.childNodes[0]););
+})();
+
 // When you run the f12 console.js script, it downloads this script and adds it to the DOM of the Scratch project (temporarily, you have to re-paste after reloading the page).
 
 // Your web app's Firebase configuration
@@ -35,22 +52,6 @@ function checkForRequests() {
       lock = true;
     }
     if (Number(document.getElementsByClassName("monitor_value_3Yexa")[0].innerHTML) < 0) { // I think this means ALL shown variables, so TODO: change later
-      (function() {
-        var po = document.createElement('script');
-        po.type = 'text/javascript';
-        po.async = true;
-        po.src = 'https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(po, s);
-      })();
-      (function() {
-        var po = document.createElement('script');
-        po.type = 'text/javascript';
-        po.async = true;
-        po.src = 'https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(po, s);
-      })();
       importCustomFunction(document.getElementsByClassName("monitor_value_3Yexa")[0].innerHTML);
       lock = true;
     }
