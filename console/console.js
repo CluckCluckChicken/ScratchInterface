@@ -19,8 +19,8 @@ function writeCode() {
     javascript: document.getElementById("function").value
   })
   .then(function() {
-    console.log("Document successfully written!");
     document.getElementById("outputCode").innerHTML == docId.toString();
+    console.log("Document successfully written!");
   })
   .catch(function(error) {
     console.error("Error writing document: ", error);
