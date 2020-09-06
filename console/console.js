@@ -20,4 +20,6 @@ function getCode() {
   .catch(function(error) {
     console.error("Error writing document: ", error);
   });
+  
+  console.log(docId);
 }
