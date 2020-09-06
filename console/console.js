@@ -1,12 +1,12 @@
-var window.docId;
+var docId;
 
 function getCode() {
-  window.docId = 0;
+  docId = 0;
   
   db.collection("functions").get().then(function(querySnapshot) {
     querySnapshot.forEach(function(doc) {
         // doc.data() is never undefined for query doc snapshots
-        window.docId++
+        docId++
         console.log("foreach document");
     });
   }).then(function() { writeCode(); });
@@ -16,7 +16,7 @@ function getCode() {
 
 function writeCode() {
   // Create the document with that function
-  db.collection("functions").doc(window.docId.toString()).set({
+  db.collection("functions").doc(docId.toString()).set({
     javascript: document.getElementById("function").value
   })
   .then(function() {
