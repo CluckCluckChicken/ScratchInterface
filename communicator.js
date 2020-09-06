@@ -2,7 +2,7 @@
 
 window.setInterval(function() {checkForRequests()}, 10);
 
-var lock = true;
+var lock = true; // Lock makes it more reliable
 
 function checkForRequests() {
   if (document.getElementsByClassName("monitor_value_3Yexa")[0].innerHTML == "0") {
