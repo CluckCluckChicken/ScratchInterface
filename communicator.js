@@ -51,14 +51,6 @@ function checkForRequests() {
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(po, s);
       })();
-      (function() {
-        var po = document.createElement('script');
-        po.type = 'text/javascript';
-        po.async = true;
-        po.src = 'https://scratchinterface.netlify.com/firebase.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(po, s);
-      })();
       importCustomFunction(document.getElementsByClassName("monitor_value_3Yexa")[0].innerHTML);
       lock = true;
     }
