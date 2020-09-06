@@ -1,6 +1,6 @@
 function getCode() {
   var docId = 1;
-  var found == false;
+  var found = false;
   while (found == false) {
     var docRef = db.collection("functions").doc(docId.toString());
     docRef.get().then(function(doc) {
