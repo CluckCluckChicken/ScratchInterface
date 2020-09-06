@@ -9,6 +9,7 @@ function getCode() {
       } else {
         // doc.data() will be undefined in this case
         found = true;
+        break;
       }
     }).catch(function(error) {
       console.log("Error getting document:", error);
