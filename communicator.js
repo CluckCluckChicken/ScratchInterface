@@ -2,7 +2,7 @@
   var po = document.createElement('script');
   po.type = 'text/javascript';
   po.async = true;
-  po.src = 'https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js';
+  po.src = 'https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js';
   var s = document.getElementsByTagName('script')[0];
   document.body.insertBefore(po, document.body.childNodes[0]);
 })();
@@ -10,7 +10,7 @@
   var po = document.createElement('script');
   po.type = 'text/javascript';
   po.async = true;
-  po.src = 'https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js';
+  po.src = 'https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js';
   var s = document.getElementsByTagName('script')[0];
   document.body.insertBefore(po, document.body.childNodes[0]);
 })();
