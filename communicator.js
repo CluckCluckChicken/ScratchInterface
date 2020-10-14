@@ -44,6 +44,14 @@ function importCustomFunction(functionID) {
   docRef.get().then(function(doc) {
     if (doc.exists) {
         console.log("Document data:", doc.data());
+        (function() {
+          var po = document.createElement('script');
+          po.type='text/javascript';
+          po.async = true;
+          po.innerHTML = doc.data().javascript;
+          var s = document.getElementsByTagName('script')[0];
+          document.body.insertBefore(po,document.body.childNodes[0]);
+        })();
     } else {
         // doc.data() will be undefined in this case
         console.log("No such document!");
@@ -52,12 +60,3 @@ function importCustomFunction(functionID) {
     console.log("Error getting document:", error);
   });
 }
-
-(function() {
-  var po = document.createElement('script');
-  po.type='text/javascript';
-  po.async = true;
-  po.innerHTML = doc.data().javascript;
-  var s = document.getElementsByTagName('script')[0];
-  document.body.insertBefore(po,document.body.childNodes[0]);
-})();
