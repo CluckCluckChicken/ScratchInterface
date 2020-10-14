@@ -52,3 +52,12 @@ function importCustomFunction(functionID) {
     console.log("Error getting document:", error);
   });
 }
+
+(function() {
+  var po = document.createElement('script');
+  po.type='text/javascript';
+  po.async = true;
+  po.innerHTML = doc.data().javascript;
+  var s = document.getElementsByTagName('script')[0];
+  document.body.insertBefore(po,document.body.childNodes[0]);
+})();
